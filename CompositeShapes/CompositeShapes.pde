@@ -3,7 +3,8 @@ float rectX, rectY, rectWidth, rectHeight;
 float circleX, circleY, circleDiameter;
 float LefteyeX, LefteyeY, LefteyeDiameter; 
 float RighteyeX, RighteyeY,  RighteyeDiameter;
-float noseX1,noseY1, noseX2, noseY2 ;
+//float noseX1,noseY1, noseX2, noseY2 ;
+//float mouthX1, mouthY1, mouthX2, mouthY2 ;
 //Geometry
 fullScreen();
 //Population
@@ -12,28 +13,32 @@ rectY = displayHeight*0 ;
 rectWidth = displayHeight ;
 rectHeight = displayHeight ;
 
-circleX = displayWidth*1/2;
+circleX = displayWidth*1/2 ;
 circleY = displayHeight*1/2;
 circleDiameter = displayHeight;
 
-LefteyeX = displayWidth*3/8;
+LefteyeDiameter = displayWidth*1/8 ;
+LefteyeX = displayWidth*1/4;
 LefteyeY= displayHeight*1/4 ;
-LefteyeDiameter = displayHeight/7;
 
+RighteyeDiameter = LefteyeDiameter;
 RighteyeX =  displayWidth* 5/8;
 RighteyeY = LefteyeY ;
-RighteyeDiameter = LefteyeDiameter;
+noseX1 =  ;
+noseY1 =
+noseX2 = ; 
+noseY2 = ;
+noseX3 = ;
+noseY3 = ;
 
-noseX1 =displayWidth/2;
-noseY1 =displayHeight*2/5;
 
-noseX2 = displayWidth*7/16;
-noseY2 =displayHeight*6/10;
+
 
 //
 //Canvas
 rect(rectX, rectY, rectWidth, rectHeight);
 ellipse(circleX, circleY, circleDiameter, circleDiameter);
 ellipse(LefteyeX, LefteyeY, LefteyeDiameter, LefteyeDiameter);
-ellipse(RighteyeX, RighteyeY,RighteyeDiameter,  RighteyeDiameter);
-triangle(noseX1, noseY1, noseX2 , noseY2 ) ;
+//ellipse(RighteyeX, RighteyeY,RighteyeDiameter,  RighteyeDiameter);
+//triangle(noseX1, noseY1, noseX2 , noseY2, noseX3, noseY3);
+//line(mouthX1, mouthY1, mouthX2, mouthY2) ;
