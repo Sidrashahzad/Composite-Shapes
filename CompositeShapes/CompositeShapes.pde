@@ -24,6 +24,8 @@ LefteyeY= displayHeight*1/4 ;
 RighteyeDiameter = LefteyeDiameter;
 RighteyeX =  displayWidth* 5/8;
 RighteyeY = LefteyeY ;
+
+//
 noseX1 =  ;
 noseY1 =
 noseX2 = ; 
