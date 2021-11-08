@@ -1,10 +1,13 @@
 //Measles
 float rectX, rectY, rectWidth, rectHeight;
-float circleX, circleY, circleDiameter;
-float LefteyeX, LefteyeY, LefteyeDiameter; 
-float RighteyeX, RighteyeY,  RighteyeDiameter;
-//float noseX1,noseY1, noseX2, noseY2 ;
-//float mouthX1, mouthY1, mouthX2, mouthY2 ;
+float faceX, faceY, faceDiameter;
+float LefteyeX, LefteyeY, eyeDiameter, RighteyeX, RighteyeY; 
+float noseX1,noseY1, noseX2, noseY2, noseX3, noseY3  ;
+float mouthX1, mouthY1, mouthX2, mouthY2;
+float mouthThick ;
+float reset ;
+float MeasleX, MeasleY,MeasleDiameter ;
+float measlesColour, resetColour=#160079
 //Geometry
 fullScreen();
 //Population
@@ -13,34 +16,60 @@ rectY = displayHeight*0 ;
 rectWidth = displayHeight ;
 rectHeight = displayHeight ;
 
-circleX = displayWidth*1/2 ;
-circleY = displayHeight*1/2;
-circleDiameter = displayHeight;
+faceX = displayWidth*1/2 ;
+faceY = displayHeight*1/2;
+faceDiameter = displayHeight;
 
-LefteyeDiameter = displayWidth*1/8 ;
-LefteyeX = displayWidth*1/4;
+eyeDiameter = displayWidth*1/8 ;
+LefteyeX = displayWidth*3/8;
 LefteyeY= displayHeight*1/4 ;
 
-RighteyeDiameter = LefteyeDiameter;
+
 RighteyeX =  displayWidth* 5/8;
 RighteyeY = LefteyeY ;
 
-//
-noseX1 =  ;
-noseY1 =
-noseX2 = ; 
-noseY2 = ;
-noseX3 = ;
-noseY3 = ;
 
+noseX1 = faceX  ;
+noseY1 = displayHeight*3/8;
+noseX2 = displayWidth*7/16;
+noseY2 = faceY;
+noseX3 = RighteyeX ;
+noseY3 = faceY;
 
+mouthX1 =  LefteyeX  ;
+mouthY1 = displayHeight*3/4;
+mouthX2 = RighteyeX ;
+mouthY2 = mouthY1;
 
+mouthThick = 20;
+reset = 1 ;
+
+MeasleX = random(displayWidth);
+MeasleY = random(displayHeight);
+MeasleDiameter = random(displayWidth*1/30), displayWidth*1/10);
 
 //
 //Canvas
 rect(rectX, rectY, rectWidth, rectHeight);
-ellipse(circleX, circleY, circleDiameter, circleDiameter);
-ellipse(LefteyeX, LefteyeY, LefteyeDiameter, LefteyeDiameter);
-//ellipse(RighteyeX, RighteyeY,RighteyeDiameter,  RighteyeDiameter);
-//triangle(noseX1, noseY1, noseX2 , noseY2, noseX3, noseY3);
-//line(mouthX1, mouthY1, mouthX2, mouthY2) ;
+ellipse(faceX, faceY, faceDiameter, faceDiameter);
+ellipse(LefteyeX, LefteyeY, eyeDiameter, eyeDiameter);
+ellipse(RighteyeX, RighteyeY,eyeDiameter,  eyeDiameter);
+triangle(noseX1, noseY1, noseX2 , noseY2, noseX3, noseY3);
+strokeWeight(mouthThick);
+line(mouthX1, mouthY1, mouthX2, mouthY2);
+strokeWeight(reset);
+fill(measlesColour);
+ellipse(MeasleX, MeasleY,MeasleDiameter,MeasleDiameter);
+ellipse(MeasleX, MeasleY,MeasleDiameter,MeasleDiameter);
+ellipse(MeasleX, MeasleY,MeasleDiameter,MeasleDiameter);
+ellipse(MeasleX, MeasleY,MeasleDiameter,MeasleDiameter);
+ellipse(MeasleX, MeasleY,MeasleDiameter,MeasleDiameter);
+ellipse(MeasleX, MeasleY,MeasleDiameter,MeasleDiameter);
+ellipse(MeasleX, MeasleY,MeasleDiameter,MeasleDiameter);
+ellipse(MeasleX, MeasleY,MeasleDiameter,MeasleDiameter);
+ellipse(MeasleX, MeasleY,MeasleDiameter,MeasleDiameter);
+ellipse(MeasleX, MeasleY,MeasleDiameter,MeasleDiameter);
+ellipse(MeasleX, MeasleY,MeasleDiameter,MeasleDiameter);
+ellipse(MeasleX, MeasleY,MeasleDiameter,MeasleDiameter);
+
+fill(resetColour);
