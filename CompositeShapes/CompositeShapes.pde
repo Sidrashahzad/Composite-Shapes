@@ -1,13 +1,22 @@
 //Measles
+//
+//GLobal variables
 float rectX, rectY, rectWidth, rectHeight;
 float faceX, faceY, faceDiameter;
 float LefteyeX, LefteyeY, eyeDiameter, RighteyeX, RighteyeY; 
-float noseX1,noseY1, noseX2, noseY2, noseX3, noseY3  ;
+float noseX1, noseY1, noseX2, noseY2, noseX3, noseY3  ;
 float mouthX1, mouthY1, mouthX2, mouthY2;
 float mouthThick ;
 float reset ;
-float MeasleX, MeasleY,MeasleDiameter ;
-float measlesColour, resetColour=#160079
+float MeasleX, MeasleY, MeasleDiameter ;
+color measlesColour=#FF030B, resetColour=#FFFFFF;
+//
+void setup() {
+  
+}//End setup()
+
+
+
 //Geometry
 fullScreen();
 //Population
@@ -29,7 +38,7 @@ RighteyeX =  displayWidth* 5/8;
 RighteyeY = LefteyeY ;
 
 
-noseX1 = faceX  ;
+noseX1 = faceX ;
 noseY1 = displayHeight*3/8;
 noseX2 = displayWidth*7/16;
 noseY2 = faceY;
@@ -46,30 +55,49 @@ reset = 1 ;
 
 MeasleX = random(displayWidth);
 MeasleY = random(displayHeight);
-MeasleDiameter = random(displayWidth*1/30), displayWidth*1/10);
+MeasleDiameter = random(displayWidth*1/30, displayWidth*1/10);
 
 //
 //Canvas
 rect(rectX, rectY, rectWidth, rectHeight);
 ellipse(faceX, faceY, faceDiameter, faceDiameter);
 ellipse(LefteyeX, LefteyeY, eyeDiameter, eyeDiameter);
-ellipse(RighteyeX, RighteyeY,eyeDiameter,  eyeDiameter);
-triangle(noseX1, noseY1, noseX2 , noseY2, noseX3, noseY3);
+ellipse(RighteyeX, RighteyeY, eyeDiameter, eyeDiameter);
+triangle(noseX1, noseY1, noseX2, noseY2, noseX3, noseY3);
 strokeWeight(mouthThick);
 line(mouthX1, mouthY1, mouthX2, mouthY2);
 strokeWeight(reset);
 fill(measlesColour);
-ellipse(MeasleX, MeasleY,MeasleDiameter,MeasleDiameter);
-ellipse(MeasleX, MeasleY,MeasleDiameter,MeasleDiameter);
-ellipse(MeasleX, MeasleY,MeasleDiameter,MeasleDiameter);
-ellipse(MeasleX, MeasleY,MeasleDiameter,MeasleDiameter);
-ellipse(MeasleX, MeasleY,MeasleDiameter,MeasleDiameter);
-ellipse(MeasleX, MeasleY,MeasleDiameter,MeasleDiameter);
-ellipse(MeasleX, MeasleY,MeasleDiameter,MeasleDiameter);
-ellipse(MeasleX, MeasleY,MeasleDiameter,MeasleDiameter);
-ellipse(MeasleX, MeasleY,MeasleDiameter,MeasleDiameter);
-ellipse(MeasleX, MeasleY,MeasleDiameter,MeasleDiameter);
-ellipse(MeasleX, MeasleY,MeasleDiameter,MeasleDiameter);
-ellipse(MeasleX, MeasleY,MeasleDiameter,MeasleDiameter);
-
+ellipse(MeasleX, MeasleY, MeasleDiameter, MeasleDiameter);
+ellipse(MeasleX, MeasleY, MeasleDiameter, MeasleDiameter);
+ellipse(MeasleX, MeasleY, MeasleDiameter, MeasleDiameter);
+ellipse(MeasleX, MeasleY, MeasleDiameter, MeasleDiameter);
+ellipse(MeasleX, MeasleY, MeasleDiameter, MeasleDiameter);
+ellipse(MeasleX, MeasleY, MeasleDiameter, MeasleDiameter);
+ellipse(MeasleX, MeasleY, MeasleDiameter, MeasleDiameter);
+ellipse(MeasleX, MeasleY, MeasleDiameter, MeasleDiameter);
+ellipse(MeasleX, MeasleY, MeasleDiameter, MeasleDiameter);
+ellipse(MeasleX, MeasleY, MeasleDiameter, MeasleDiameter);
+ellipse(MeasleX, MeasleY, MeasleDiameter, MeasleDiameter);
+ellipse(MeasleX, MeasleY, MeasleDiameter, MeasleDiameter);
+ellipse(MeasleX, MeasleY, MeasleDiameter, MeasleDiameter);
+ellipse(MeasleX, MeasleY, MeasleDiameter, MeasleDiameter);
+ellipse(MeasleX, MeasleY, MeasleDiameter, MeasleDiameter);
+ellipse(MeasleX, MeasleY, MeasleDiameter, MeasleDiameter);
+ellipse(MeasleX, MeasleY, MeasleDiameter, MeasleDiameter);
+ellipse(MeasleX, MeasleY, MeasleDiameter, MeasleDiameter);
+ellipse(MeasleX, MeasleY, MeasleDiameter, MeasleDiameter);
+ellipse(MeasleX, MeasleY, MeasleDiameter, MeasleDiameter);
+ellipse(MeasleX, MeasleY, MeasleDiameter, MeasleDiameter);
+ellipse(MeasleX, MeasleY, MeasleDiameter, MeasleDiameter);
+ellipse(MeasleX, MeasleY, MeasleDiameter, MeasleDiameter);
+ellipse(MeasleX, MeasleY, MeasleDiameter, MeasleDiameter);
+ellipse(MeasleX, MeasleY, MeasleDiameter, MeasleDiameter);
+ellipse(MeasleX, MeasleY, MeasleDiameter, MeasleDiameter);
+ellipse(MeasleX, MeasleY, MeasleDiameter, MeasleDiameter);
+ellipse(MeasleX, MeasleY, MeasleDiameter, MeasleDiameter);
+ellipse(MeasleX, MeasleY, MeasleDiameter, MeasleDiameter);
+ellipse(MeasleX, MeasleY, MeasleDiameter, MeasleDiameter);
+ellipse(MeasleX, MeasleY, MeasleDiameter, MeasleDiameter);
+ellipse(MeasleX, MeasleY, MeasleDiameter, MeasleDiameter);
 fill(resetColour);
