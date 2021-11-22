@@ -8,8 +8,9 @@ float noseX1, noseY1, noseX2, noseY2, noseX3, noseY3  ;
 float mouthX1, mouthY1, mouthX2, mouthY2;
 float mouthThick ;
 float reset ;
+
+color measlesColour, red=#FF030B, resetColour=#FFFFFF;
 float MeasleX, MeasleY, MeasleDiameter ;
-color measlesColour=#FF030B, resetColour=#FFFFFF;
 //
 void setup() {
   //Geometry
@@ -47,15 +48,17 @@ void setup() {
 
   mouthThick = 20;
   reset = 1 ;
+  
   //
 }//End setup()
 //
 void draw() {
 //population that changes
-MeasleX = random(displayWidth);
-MeasleY = random(displayHeight);
-MeasleDiameter = random(displayWidth*1/30, displayWidth*1/10);
+
+
+
 //Canvas
+  
  rect(rectX, rectY, rectWidth, rectHeight);
 ellipse(faceX, faceY, faceDiameter, faceDiameter);
 
@@ -66,10 +69,21 @@ strokeWeight(mouthThick);
 line(mouthX1, mouthY1, mouthX2, mouthY2);
 strokeWeight(reset);
 
+println(MeasleX, MeasleY);
+if(MeasleX >=rectX && MeasleY >= displayHeight*0 && MeasleX <=rectWidth && MeasleY <= rectHeight);
+{
 
+measlesColour = red ;
+}
+
+MeasleX = random(displayWidth);
+MeasleY = random (displayHeight);
 fill(measlesColour);
+
+MeasleDiameter = random(displayWidth*1/50, displayWidth*1/50);
+
 ellipse(MeasleX, MeasleY, MeasleDiameter, MeasleDiameter);
 fill(resetColour);
-rect(rectX, rectY, rectWidth, rectHeight);
-ellipse(faceX, faceY, faceDiameter, faceDiameter);
+  
+
 }//End draw ()
