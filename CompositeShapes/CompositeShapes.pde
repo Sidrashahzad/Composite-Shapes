@@ -69,8 +69,8 @@ strokeWeight(mouthThick);
 line(mouthX1, mouthY1, mouthX2, mouthY2);
 strokeWeight(reset);
 
-println(MeasleX, MeasleY);
-if(MeasleX >=rectX && MeasleY >= displayHeight*0 && MeasleX <=rectWidth && MeasleY <= rectHeight);
+println(mouseX, MeasleY);
+if(mouseX >= rectX && mouseY >= rectY *0 && mouseX <=rectX+rectWidth && mouseY <= rectY+rectHeight);
 {
 
 measlesColour = red ;
@@ -87,3 +87,7 @@ fill(resetColour);
   
 
 }//End draw ()
+
+void mousePressed() {
+  if ( mouseX >=   rectX &&  mouseY >= rectY && mouseX <= rectX+rectWidth && mouseY <= rectY+rectHeight) start ();}
+// end mousePressed()
